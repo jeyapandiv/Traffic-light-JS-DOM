@@ -20,54 +20,47 @@ main.append(time,subRed,subYellow,subGreen);
 time.appendChild(count);
 
 
-let tracker1 = 10;
-let tracker2=5
-let tracker3=10
+let timer1 = 10;
+let timer2=5
+let value = 0;
 
-// count.textContent = tracker;
-
-
-let x = 0;
-
-
-function timer() {
-    if (x < 11) {
+function signal() 
+{
+    if (value < 11) 
+    {
        subRed.style.backgroundColor = 'red';
        subYellow.style.backgroundColor = 'black';
        subGreen.style.backgroundColor = 'black';
-       count.textContent = tracker1;
+       count.textContent = timer1;
        count.style.color="red"
-       tracker1--
+       timer1--
     } 
-    else if (x >= 11 && x < 16) {
-        
+    else if (value >= 11 && value < 17) 
+    {
        subYellow.style.backgroundColor = 'yellow';
        subRed.style.backgroundColor = 'black';
        subGreen.style.backgroundColor = 'black';
-       count.textContent = tracker2;
+       count.textContent = timer2;
        count.style.color="yellow"
-       tracker2--
+       timer2--
+       timer1=10;
     } 
-    else if (x >= 16 && x <27) {
-  
+    else if (value >=17 && value <=27) 
+    {
        subGreen.style.backgroundColor = 'green';
        subRed.style.backgroundColor = 'black';
        subYellow.style.backgroundColor = 'black';
-       count.textContent = tracker3;
+       count.textContent = timer1;
        count.style.color="green"
-       tracker3--
+       timer1--
     }
-    x++;
-    if(x>=27){
-        tracker1=10
-        tracker2=5
-        tracker3=10
-    }
-    if (x >= 27) {
-        x = 0;
-    }
-    
+    value++;
+    if(value > 27)
+    {
+      timer1=10
+      timer2=5
+      value = 0;
+    }  
 }
-
-setInterval(timer, 1000);
+setInterval(signal, 1000);
 
