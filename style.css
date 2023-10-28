@@ -41,3 +41,16 @@ body {
     background-color: black;
     border: 5px solid rgb(8, 3, 3);
 }
+
+.bgr {
+    background-color: red;
+}
+.bgy {
+    background-color: yellow;
+}
+.bgg {
+    background-color: green;
+}
+.bg1 {
+    background-color: black;
+}
